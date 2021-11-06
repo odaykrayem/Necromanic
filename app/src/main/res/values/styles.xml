@@ -1,0 +1,34 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layoutDirection">ltr</item>
+
+    </style>
+
+
+    <style name="CustomShapeAppearance">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">28dp</item>
+
+    </style>
+
+    <style name="CustomShapeAppearanceRect">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">180dp</item>
+
+    </style>
+
+    <style name="CustomShapeAppearanceRound">
+        <item name="neumorph_cornerFamily">rounded</item>
+        <item name="neumorph_cornerSize">120dp</item>
+
+    </style>
+
+</resources>

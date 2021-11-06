@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity"
+    android:background="@color/neumorphism_light">
+    <RelativeLayout
+        android:id="@+id/emf_settings_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginTop="22dp">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:textColor="@color/textDark"
+            android:text="EMF Unit : "/>
+
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            app:ms_arrow_tint="@color/design_concept"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/emf_unit_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="true"
+            app:ms_background_color="@color/neumorphism_light"
+            android:entries="@array/spinnerItems"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/evp_filter_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emf_settings_layout"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="68dp"
+        android:text="EVP Disable Filters  "
+        android:textColor="@color/textDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:thumbTint="@color/design_concept"
+        app:trackTint="@color/design_concept_light"
+        android:trackTint="@android:color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/acc_drawing_range_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/evp_filter_switch"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:id="@+id/acc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer Maximum Value : "
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            />
+        <LinearLayout
+            android:layout_below="@id/acc_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:weightSum="6">
+            <app.minimize.com.seek_bar_compat.SeekBarCompat
+                android:id="@+id/acc_range_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                app:progressColor="@color/design_concept"
+                app:progressBackgroundColor="@color/neu_dark"
+                app:thumbColor="@color/design_concept"
+                android:max="170"
+                android:min="20"/>
+            <TextView
+                android:id="@+id/acc_text_value"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:text="20m/s²"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/acc_no_gravity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acc_drawing_range_layout"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="68dp"
+        android:text="Accelerometer Subtract Gravity  "
+        android:textColor="@color/textDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:thumbTint="@color/design_concept"
+        app:trackTint="@color/design_concept_light"
+        android:trackTint="@android:color/white" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/test_sensors_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/acc_no_gravity"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="22dp"
+        android:text="Test the sensors again "
+        android:textColor="@color/textDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:thumbTint="@color/design_concept"
+        app:trackTint="@color/design_concept_light"
+        android:trackTint="@android:color/white" />
+
+
+    <!--    <RelativeLayout-->
+<!--        android:layout_below="@id/emf_settings_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_margin="22dp">-->
+
+<!--        <TextView-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/textDark"-->
+<!--            android:text="EMF Unit : "/>-->
+
+<!--        <Spinner-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:id="@+id/spinner"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawSelectorOnTop="true"-->
+<!--            android:entries="@array/spinnerItems"-->
+<!--            android:textAlignment="center"-->
+<!--            />-->
+<!--    </RelativeLayout>-->
+
+
+
+</RelativeLayout>

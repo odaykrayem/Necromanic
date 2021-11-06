@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs"
+    android:orientation="vertical"
+    android:background="@color/neumorphism_light">
+
+    <ScrollView
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_margin="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="if you found a Bug or have an Idea to make the app better please don't hesitate to contact us : "
+                android:textColor="@color/textDark"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <com.github.sshadkany.RectButton
+                    android:id="@+id/contact_us_bug_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    app:shape_roundRect_shadow_position_x="3dp"
+                    app:shape_roundRect_shadow_position_y="3dp"
+                    android:layout_gravity="center"
+                    app:shape_roundRect_topRightRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+                    app:shape_roundRect_dark_color="@color/neu_light"
+                    app:shape_roundRect_light_color="@color/neu_dark"
+                    app:shape_roundRect_borderWidth="1dp"
+                    app:shape_roundRect_borderColor="@color/design_concept" >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_bug"/>
+                </com.github.sshadkany.RectButton>
+
+                <com.github.sshadkany.RectButton
+                    android:id="@+id/contact_us_idea_btn"
+                    android:layout_toEndOf="@id/contact_us_bug_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerVertical="true"
+                    app:shape_roundRect_shadow_position_x="3dp"
+                    app:shape_roundRect_shadow_position_y="3dp"
+                    app:shape_roundRect_topRightRadius="16dp"
+                    app:shape_roundRect_bottomRightRadius="16dp"
+                    app:shape_roundRect_topLeftRadius="16dp"
+                    app:shape_roundRect_bottomLeftRadius="16dp"
+                    app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+                    app:shape_roundRect_dark_color="@color/neu_light"
+                    app:shape_roundRect_light_color="@color/neu_dark"
+                    app:shape_roundRect_borderWidth="1dp"
+                    app:shape_roundRect_borderColor="@color/design_concept"  >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_light_bulb"/>
+                </com.github.sshadkany.RectButton>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_margin="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/textDark"
+                android:text="\n
+NecroManiac is an application that uses your mobile device sensors to detect sources of variable magnetic emissions. Which could indicate us the presence of some kind of paranormal activity.\n\n
+our App has the most accurate values that comes directly from Electromagnetic Field sensor. it can Also detect objects motion around you with 100% real values from the Accelerometer sensor .\n\n
+The accelerometer is an electromechanical sensor that measures the force of acceleration caused by movement or by gravity or by vibration. These forces can be static like gravity force, dynamic senses movement, or vibrations.\n
+\nfinally we supplied the app with a sensitive sound recorder to catch electronic voice phenomena (EVP) which are sounds found on electronic recordings that are interpreted as spirit voices that have been either unintentionally recorded or intentionally requested and recorded.\n\n
+EMF Normal Value : 45µT\n
+Accelerometer Normal value : 9.8m/s2\n
+recordings encoding bitrate : 32bit\n\n
+"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textDark"
+                android:textSize="12sp"
+                android:alpha="0.8"
+                android:textAlignment="center"
+                android:text="designed by DigitalMinds Team" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

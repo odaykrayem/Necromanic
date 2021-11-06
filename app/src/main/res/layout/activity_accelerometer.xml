@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccelerometerActivity"
+    android:background="@color/neumorphism_light"
+    android:gravity="fill_horizontal">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/acc_chart_container"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/constants_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        app:neumorph_inset="12dp"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shapeType="flat"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_backgroundColor="@color/neumorphism_light"
+        android:padding="12dp"
+        >
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/acc_chart"
+            android:padding="8dp"
+            android:layout_margin="9dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_marginTop="16dp"
+        android:id="@+id/constants_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:neumorph_inset="12dp"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shapeType="flat"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_backgroundColor="@color/neumorphism_light"
+        android:padding="12dp"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/constants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:padding="@dimen/acc_constants_padding"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Max"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Min"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Avg"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/constants"
+                android:orientation="horizontal"
+                android:padding="@dimen/acc_constants_padding"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/acc_tv_max"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="10"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+                <TextView
+                    android:id="@+id/acc_tv_min"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+                <TextView
+                    android:id="@+id/acc_tv_avg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="15"
+                    android:textColor="@color/textDark"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/acc_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_marginTop="18dp"
+        android:id="@+id/acc_main_progress_container"
+        android:layout_width="256dp"
+        android:layout_height="256dp"
+        android:layout_below="@id/acc_chart_container"
+        android:layout_alignParentStart="true"
+        app:neumorph_inset="12dp"
+        app:neumorph_shadowElevation="6dp"
+        app:neumorph_lightSource="leftTop"
+        app:neumorph_shapeType="flat"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_backgroundColor="@color/neumorphism_light"
+        android:padding="12dp"
+        >
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:neumorph_inset="12dp"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shapeType="basin"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+            app:neumorph_backgroundColor="@color/neumorphism_light"
+            android:padding="12dp"
+            >
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:neumorph_inset="12dp"
+                app:neumorph_shadowElevation="6dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="flat"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                app:neumorph_backgroundColor="@color/neumorphism_light"
+                android:padding="12dp"
+                >
+            </soup.neumorphism.NeumorphCardView>
+            <com.dinuscxj.progressbar.CircleProgressBar
+                android:id="@+id/line_progress"
+                android:layout_alignParentStart="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:progress_style="solid_line"
+                app:progress_blur_style="inner"
+                app:progress_background_color="#00000000"
+                app:progress_start_color="@color/design_concept"
+                app:progress_end_color="@color/design_concept"
+                app:progress_stroke_cap="round"
+                app:progress_start_degree="90"
+                app:progress_stroke_width="20dp"
+                app:progress_text_size="20sp"
+                app:progress_text_color="@color/textDark" />
+        </soup.neumorphism.NeumorphCardView>
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+    <LinearLayout
+        android:foregroundGravity="center_horizontal"
+        android:layout_below="@id/acc_chart_container"
+        android:layout_toEndOf="@id/acc_main_progress_container"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/acc_x_progress_container"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            app:neumorph_inset="12dp"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shapeType="flat"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_backgroundColor="@color/neumorphism_light"
+            android:padding="12dp"
+            >
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_inset="12dp"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                app:neumorph_backgroundColor="@color/neumorphism_light"
+                android:padding="12dp"
+                >
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    app:neumorph_inset="6dp"
+                    app:neumorph_shadowElevation="4dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                    app:neumorph_backgroundColor="@color/neumorphism_light"
+                    android:padding="12dp"
+                    >
+                </soup.neumorphism.NeumorphCardView>
+                <com.dinuscxj.progressbar.CircleProgressBar
+                    android:id="@+id/x_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:progress_style="solid_line"
+                    app:progress_blur_style="inner"
+                    app:progress_start_color="@color/design_concept"
+                    app:progress_end_color="@color/design_concept"
+                    app:progress_background_color="#00000000"
+                    app:progress_stroke_cap="round"
+                    app:progress_start_degree="90"
+                    app:progress_stroke_width="8dp"
+                    app:progress_text_size="8sp"
+                    app:progress_text_color="@color/textDark"/>
+            </soup.neumorphism.NeumorphCardView>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/acc_y_progress_container"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            app:neumorph_inset="12dp"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shapeType="flat"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_backgroundColor="@color/neumorphism_light"
+            android:padding="12dp"
+            >
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_inset="12dp"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                app:neumorph_backgroundColor="@color/neumorphism_light"
+                android:padding="12dp"
+                >
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    app:neumorph_inset="6dp"
+                    app:neumorph_shadowElevation="4dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                    app:neumorph_backgroundColor="@color/neumorphism_light"
+                    android:padding="12dp"
+                    >
+                </soup.neumorphism.NeumorphCardView>
+                <com.dinuscxj.progressbar.CircleProgressBar
+                    android:id="@+id/y_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:progress_style="solid_line"
+                    app:progress_blur_style="inner"
+                    app:progress_start_color="@color/design_concept"
+                    app:progress_end_color="@color/design_concept"
+                    app:progress_background_color="#00000000"
+                    app:progress_stroke_cap="round"
+                    app:progress_start_degree="90"
+                    app:progress_stroke_width="8dp"
+                    app:progress_text_size="8sp"
+                    app:progress_text_color="@color/textDark"/>
+            </soup.neumorphism.NeumorphCardView>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/acc_z_progress_container"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            app:neumorph_inset="12dp"
+            app:neumorph_shadowElevation="6dp"
+            app:neumorph_lightSource="leftTop"
+            app:neumorph_shapeType="flat"
+            app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+            app:neumorph_backgroundColor="@color/neumorphism_light"
+            android:padding="12dp"
+            >
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:neumorph_inset="12dp"
+                app:neumorph_shadowElevation="4dp"
+                app:neumorph_lightSource="leftTop"
+                app:neumorph_shapeType="basin"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                app:neumorph_backgroundColor="@color/neumorphism_light"
+                android:padding="12dp"
+                >
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    app:neumorph_inset="6dp"
+                    app:neumorph_shadowElevation="4dp"
+                    app:neumorph_lightSource="leftTop"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearanceRound"
+                    app:neumorph_backgroundColor="@color/neumorphism_light"
+                    android:padding="12dp"
+                    >
+                </soup.neumorphism.NeumorphCardView>
+                <com.dinuscxj.progressbar.CircleProgressBar
+                    android:id="@+id/z_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:progress_style="solid_line"
+                    app:progress_blur_style="inner"
+                    app:progress_start_color="@color/design_concept"
+                    app:progress_end_color="@color/design_concept"
+                    app:progress_background_color="#00000000"
+                    app:progress_stroke_cap="round"
+                    app:progress_start_degree="90"
+                    app:progress_stroke_width="8dp"
+                    app:progress_text_size="8sp"
+                    app:progress_text_color="@color/textDark"/>
+            </soup.neumorphism.NeumorphCardView>
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

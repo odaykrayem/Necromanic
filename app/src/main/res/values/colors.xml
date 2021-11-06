@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00000000</color>
+    <color name="colorPrimaryDark">@color/neumorphism_light</color>
+    <color name="colorAccent">#DB1B60</color>
+    <color name="tab_strip">@color/design_concept</color>
+
+    <color name="neumorphism_light">#ecedf1</color>
+    <color name="neu_light">#ABB1BC</color>
+    <color name="neu_dark">#FFF</color>
+    <color name="whit_1000">#ffffff</color>
+
+    <color name="neu_main_dark">#B6BDC8</color>
+
+    <color name="design_concept">#2ad0c7</color>
+    <color name="design_concept_light">#7DEDE7</color>
+
+
+    <color name="emf_green">#64DD17</color>
+    <color name="emf_green_light">#AEEA00</color>
+    <color name="emf_yellow_light">#C6FF00</color>
+    <color name="emf_yellow">#FFFF00</color>
+    <color name="emf_orange_light">#FFAB00</color>
+    <color name="emf_orange">#FF6D00</color>
+    <color name="emf_red_light">#FF3D00</color>
+    <color name="emf_red">#d50000</color>
+
+    <array name="emf_allert">
+        <item>@color/emf_green</item>
+        <item>@color/emf_green_light</item>
+        <item>@color/emf_yellow_light</item>
+        <item>@color/emf_yellow</item>
+        <item>@color/emf_orange_light</item>
+        <item>@color/emf_orange</item>
+        <item>@color/emf_red_light</item>
+        <item>@color/emf_red</item>
+    </array>
+
+    <color name="textDark">#8A000000</color>
+
+</resources>

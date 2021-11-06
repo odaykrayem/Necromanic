@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neumorphism_light">
+
+    <com.github.sshadkany.CircleButton
+        android:id="@+id/btn_record"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:padding="20dp"
+        app:shape_circle_shadow_position_x="3dp"
+        app:shape_circle_shadow_position_y="3dp"
+        app:shape_circle_backgroundColor="@color/neumorphism_light"
+        app:shape_circle_dark_color="@color/neu_light"
+        app:shape_circle_light_color="@color/neu_dark"
+        app:shape_circle_borderWidth="1dp"
+        app:shape_circle_borderColor="@color/design_concept"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp">
+
+        <ImageView
+            android:layout_margin="20dp"
+            android:id="@+id/record_btn_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_mic_white"
+            />
+
+    </com.github.sshadkany.CircleButton>
+
+
+
+    <com.github.sshadkany.shapes.CircleView
+        android:layout_marginTop="20dp"
+        android:id="@+id/record_progress_bar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:shape_circle_shadow_position_x="3dp"
+        app:shape_circle_shadow_position_y="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:shape_circle_backgroundColor="@color/neumorphism_light"
+        app:shape_circle_dark_color="@color/neu_light"
+        app:shape_circle_light_color="@color/neu_dark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dp"
+            android:src="@drawable/record_progress_bar_background"
+            />
+
+        <Chronometer
+            android:gravity="center"
+            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/textDark"
+            android:textSize="30sp"/>
+
+    </com.github.sshadkany.shapes.CircleView>
+
+
+    <TextView
+        android:id="@+id/recording_status_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_record"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Record"
+        android:textColor="@color/textDark"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

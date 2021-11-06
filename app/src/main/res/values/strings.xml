@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Necromaniac</string>
+
+    <string-array name="spinnerItems">
+        <item>micro tesla</item>
+        <item>gauss</item>
+    </string-array>
+
+</resources>

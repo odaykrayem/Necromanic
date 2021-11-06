@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@color/neumorphism_light"
+    android:id="@+id/bg"
+    android:weightSum="4"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:src="@drawable/bg_logo2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        >
+
+
+
+        <com.github.sshadkany.RectButton
+            android:id="@+id/emf_btn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shape_roundRect_shadow_position_x="3dp"
+            app:shape_roundRect_shadow_position_y="3dp"
+            app:shape_roundRect_topRightRadius="24dp"
+            app:shape_roundRect_bottomRightRadius="24dp"
+            app:shape_roundRect_topLeftRadius="24dp"
+            app:shape_roundRect_bottomLeftRadius="24dp"
+            app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+            app:shape_roundRect_dark_color="@color/neu_light"
+            app:shape_roundRect_light_color="@color/neu_dark"
+            app:shape_roundRect_borderWidth="1dp"
+            app:shape_roundRect_borderColor="@color/design_concept"
+             >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                android:textSize="10sp"
+                android:text="EMF"/>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_wifi_signal" />
+        </com.github.sshadkany.RectButton>
+
+        <com.github.sshadkany.RectButton
+            android:id="@+id/evp_btn"
+            android:layout_toEndOf="@id/emf_btn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shape_roundRect_shadow_position_x="3dp"
+            app:shape_roundRect_shadow_position_y="3dp"
+            app:shape_roundRect_topRightRadius="24dp"
+            app:shape_roundRect_bottomRightRadius="24dp"
+            app:shape_roundRect_topLeftRadius="24dp"
+            app:shape_roundRect_bottomLeftRadius="24dp"
+            app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+            app:shape_roundRect_dark_color="@color/neu_light"
+            app:shape_roundRect_light_color="@color/neu_dark"
+            app:shape_roundRect_borderWidth="1dp"
+            app:shape_roundRect_borderColor="@color/design_concept"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                android:textSize="10sp"
+                android:text="EVP"/>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_microphone_48" />
+        </com.github.sshadkany.RectButton>
+
+
+        <com.github.sshadkany.RectButton
+            android:layout_below="@id/emf_btn"
+            android:id="@+id/acc_btn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shape_roundRect_shadow_position_x="3dp"
+            app:shape_roundRect_shadow_position_y="3dp"
+            app:shape_roundRect_topRightRadius="24dp"
+            app:shape_roundRect_bottomRightRadius="24dp"
+            app:shape_roundRect_topLeftRadius="24dp"
+            app:shape_roundRect_bottomLeftRadius="24dp"
+            app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+            app:shape_roundRect_dark_color="@color/neu_light"
+            app:shape_roundRect_light_color="@color/neu_dark"
+            app:shape_roundRect_borderWidth="1dp"
+            app:shape_roundRect_borderColor="@color/design_concept"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                android:textSize="10sp"
+                android:text="Motion"/>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/motion_logo" />
+        </com.github.sshadkany.RectButton>
+
+
+        <com.github.sshadkany.RectButton
+            android:layout_below="@id/evp_btn"
+            android:layout_toEndOf="@id/acc_btn"
+            android:id="@+id/settings_btn"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:shape_roundRect_shadow_position_x="3dp"
+            app:shape_roundRect_shadow_position_y="3dp"
+            app:shape_roundRect_topRightRadius="24dp"
+            app:shape_roundRect_bottomRightRadius="24dp"
+            app:shape_roundRect_topLeftRadius="24dp"
+            app:shape_roundRect_bottomLeftRadius="24dp"
+            app:shape_roundRect_backgroundColor="@color/neumorphism_light"
+            app:shape_roundRect_dark_color="@color/neu_light"
+            app:shape_roundRect_light_color="@color/neu_dark"
+            app:shape_roundRect_borderWidth="1dp"
+            app:shape_roundRect_borderColor="@color/design_concept"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/textDark"
+                android:textSize="10sp"
+                android:text="Settings"/>
+
+            <ImageView
+                android:layout_marginBottom="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_settings"
+                android:layout_gravity="center" />
+        </com.github.sshadkany.RectButton>
+
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:textSize="12sp"
+        android:text="Created By DigitalMinds Team" />
+
+    <TextView
+        android:id="@+id/about_us_txt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:textAlignment="center"
+        android:paddingTop="6dp"
+        android:textSize="14sp"
+        android:textColor="@color/design_concept"
+        android:text="About This App"/>
+
+
+
+
+</LinearLayout>

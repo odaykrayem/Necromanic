@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Accelerometer Dims -->
+    <dimen name="acc_constants_padding">8dp</dimen>
+    <dimen name="acc_text_size">16sp</dimen>
+
+    <dimen name="emf_bar_container_width">230dp</dimen>
+    <dimen name="emf_bar_container_height">450dp</dimen>
+    <dimen name="emf_bar_status_elevation">12dp</dimen>
+    <dimen name="emf_bar_stroke_width">4dp</dimen>
+
+    <dimen name="btn_width">120dp</dimen>
+    <dimen name="btn_height">120dp</dimen>
+    <dimen name="margin_start_from_screen">40dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="margin_between_btn">16dp</dimen>
+    <dimen name="padding_btn">20dp</dimen>
+    <dimen name="padding_drawable">10dp</dimen>
+
+</resources>
